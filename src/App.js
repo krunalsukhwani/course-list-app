@@ -1,9 +1,17 @@
 import React from "react";
-import "./App.css";
+import './App.css';
 
 const App = () => {
-  //JSX code
-  return <h1 title="Professor: Krunal">Hello Friends, Welcome to COMP229</h1>;
+  return (
+    <div className="course-info">
+      <h2>Course List</h2>
+      <ul className="course-list">
+        <li>Advanced Web Development</li>
+        <li>Java Programming</li>
+        <li>Advanced Database Concepts</li>
+      </ul>
+    </div>
+  );
 };
 
 export default App;
