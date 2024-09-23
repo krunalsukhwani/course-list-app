@@ -6,7 +6,7 @@ const NewCourse = props => {
   const addCourseHandler = (event) => {
     event.preventDefault();
     const newCourse = {
-      id: "COMP303",
+      id: Math.random().toString(),
       text: "JAVA EE Programming",
     };
     props.onAddCourse(newCourse);

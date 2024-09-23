@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 import CourseList from "./Components/CourseList";
 import NewCourse from "./Components/NewCourse";
 
 const App = () => {
 
-  const courseList = [
-    { id:'COMP229', text: 'Web Application Development'},
-    { id:'COMP228', text: 'Java Programming'},
-    { id:'COMP214', text: 'Advanced Database Concepts'},
-    { id:'COMP212', text: 'Programming 3'}
-  ];
+  const [ courseList, setCourseList ] = useState(
+    [
+      { id:'COMP229', text: 'Web Application Development'},
+      { id:'COMP228', text: 'Java Programming'},
+      { id:'COMP214', text: 'Advanced Database Concepts'},
+      { id:'COMP212', text: 'Programming 3'}
+    ]
+  )
 
   const addNewCourseHandler = (newCourse) => {
-    courseList.push(newCourse);
-    console.log(courseList);
+    setCourseList((prevCourseList) => {
+      return prevCourseList.concat(newCourse);
+    });
   };
 
   return (
