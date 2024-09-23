@@ -1,12 +1,12 @@
 import React from "react";
 import "./CourseList.css";
 
-const CourseList = () => {
+const CourseList = (props) => {
   return (
     <ul className="course-list">
-      <li>Advanced Web Development</li>
-      <li>Java Programming</li>
-      <li>Advanced Database Concepts</li>
+      {props.courses.map((course) => {
+        return <li key={course.id}>{course.text}</li>;
+      })}
     </ul>
   );
 };
