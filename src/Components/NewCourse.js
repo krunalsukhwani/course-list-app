@@ -1,14 +1,15 @@
 import React from "react";
 import "./NewCourse.css";
 
-const NewCourse = () => {
+const NewCourse = props => {
+
   const addCourseHandler = (event) => {
     event.preventDefault();
     const newCourse = {
       id: "COMP303",
       text: "JAVA EE Programming",
     };
-    console.log(newCourse);
+    props.onAddCourse(newCourse);
   };
 
   return (

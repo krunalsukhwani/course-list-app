@@ -12,10 +12,15 @@ const App = () => {
     { id:'COMP212', text: 'Programming 3'}
   ];
 
+  const addNewCourseHandler = (newCourse) => {
+    courseList.push(newCourse);
+    console.log(courseList);
+  };
+
   return (
     <div className="course-info">
       <h2>Course List</h2>
-      <NewCourse />
+      <NewCourse onAddCourse={addNewCourseHandler}/>
       <CourseList courses={courseList}/>
     </div>
   );
