@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css';
 import CourseList from "./Components/CourseList";
+import NewCourse from "./Components/NewCourse";
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
   return (
     <div className="course-info">
       <h2>Course List</h2>
+      <NewCourse />
       <CourseList courses={courseList}/>
     </div>
   );
